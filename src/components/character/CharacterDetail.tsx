@@ -1,26 +1,25 @@
 import React from "react";
 import CoreStat from "./CoreStat";
+import CharacterStat from "./CharacterStat";
 
 export default function CharacterDetail() {
 	return (
-		<div>
+		<div className="character-detail">
 			<div className="name-level">
-				<div className="name">Name: characterName</div>
-				<div className="level">Level: characterLevel</div>
+				<div className="character-name">
+					Name: The Wizard of Wiggleshire
+				</div>
+				<div className="character-level">Level: 1</div>
 			</div>
 			<div className="stats">
-				<div className="health">Health: characterHealth</div>
-				<div className="initiative">
-					Initiative: characterInitiative
-				</div>
-				<div className="speed">Speed: characterSpeed</div>
-				<div className="hitDice">Hit Dice: characterHitDice</div>
-				<div className="armor-class">
-					Armor Class: characterArmorClass
-				</div>
-				<div className="proficiency">
-					Proficiency: characterProficiency
-				</div>
+				<CharacterStat name={"Initiative"} score={0} />
+				<CharacterStat name={"Health"} score={10} />
+				<CharacterStat name={"Speed"} score={30} />
+				<CharacterStat name={"Hit Dice"} score={"1d8"} />
+				<CharacterStat name={"Armor Class"} score={10} />
+				<CharacterStat name={"Proficiency"} score={2} />
+			</div>
+			<div className="traits">
 				<CoreStat name={"Strength"} score={10} modifier={10} save={1} />
 				<CoreStat
 					name={"Intelligence"}
