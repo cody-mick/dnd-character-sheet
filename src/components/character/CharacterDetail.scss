@@ -13,7 +13,7 @@
 	}
 
 	.character-stat {
-		border: 1px solid black;
+		border: 1px solid white;
 		border-radius: 15px;
 		padding: 15px;
 		width: 125px;
@@ -39,10 +39,27 @@
 	}
 
 	.character-traits {
-		border: 1px solid black;
-		width: 25%;
+		border: 1px solid white;
+		width: 15%;
 		border-radius: 15px;
 		padding: 15px;
 		margin: 15px;
+
+		.trait-name {
+			font-size: 24px;
+			text-align: center;
+		}
+
+		.detail-blocks {
+			display: flex;
+			flex-direction: row;
+
+			.detail-block {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+		}
 	}
 }
